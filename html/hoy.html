@@ -2,39 +2,48 @@
 <html>
 	<head>
 		<title>ISAT 252 Exam 1</title>
-		<script>
-			function validateSA1(){
-			var a=document.forms["SA1"]["streetaddress1"].value;
-			if (a==null || a==""){
-				alert ("Street Address Line 1 must be filled out");
-				return false;
-				}
-			}
-			</script>
 	</head>
 	<body>
 		<h1>Enter your contact info!</h1> <br>
-		<form name="SA1" onsubmit="return validateSA1()">
+		<form name="address">
 		Street Address Line 1: <input type="text" name="streetaddress1"><br>
-		</form>
-		<form name="SA2" onsubmit="return validateSA2()">
 		Street Address Line 2: <input type="text" name="streetaddress2"><br>
-		</form>
-		<form name="CTY" onsubmit="return validateCTY()">
 		City: <input type="text" name="city"><br>
-		</form>
-		<form name="ST" onsubmit="return validateST()">
 		State: <input type="text" name="state"><br>
-		</form>
-		<form name="ZIP" onsubmit="return validateZIP()">
 		Zip: <input type="text" name="zip"><br>
-		</form>
-		<form name="PN" onsubmit="return validatePN()">
 		Phone Number: <input type="text" name="phonenumber"><br>
-		</form>
-		<form name="E" onsubmit="return validateE()">
 		Email: <input type="text" name="email"><br>
 		</form>
-		<button type="button" onclick="validateSA1()">Submit</button>
+		<button type="button" onclick=["validateForm()">Submit</button>
+				<script>
+			function validateForm(){
+			var SA1= document.address.streetaddress1.value;
+			var SA2= document.address.streetaddress2.value;
+			var CTY= document.address.city.value;
+			var ST = document.address.state.value;
+			var ZIP= document.address.zip.value;
+			var PN= document.address.phonenumber.value;
+			var E= document.address.email.value;
+			if (SA1==""){
+				alert("The Street Address Line 1 field is not filled in.")
+				}
+			else if (CTY=="")
+				{
+				alert("The City field is not filled in.")
+				}
+			else if (ST==""){
+				alert("The State field is not filled in.")
+				}
+			else if (ZP==""){
+				alert("The Zip field is not filled in.")
+				}
+			else if (PN==""){
+				alert("The Phone Number field is not filled in.")
+				}
+			else (E==""){
+				alert("The Email field is not filled in.")
+				}
+			}
+			</script>
 	</body>
 	</html>
